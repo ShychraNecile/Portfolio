@@ -4,6 +4,10 @@
 	<title>Visite naam</title>
 	<link rel="stylesheet" href="style.css">
 	<script type="text/javascript" src="main1.js"></script>
+	<script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
 </head>
 <body onload="onload()">
 	<div class="banner">
@@ -90,5 +94,20 @@
 		</div>
 			</div> 
 	</div>
+		<div class="tile">
+		<div class="header">
+		Weerbericht (van meteoserver)
+		</div>
+		<div><ul>
+			<li>alarm laatst bijgewerkt <span id="alarmbijgewerkt"></span></li>
+			<li>laatste opgehaald <span id="updated"></span></li>
+			<li>temperatuur <span id="temperatuur"></span><text> °C</text></li>
+			<li>maximum temperatuur <span id="maxTemperatuur"></span><text> °C</text></li>
+			<li>minimale temperatuur <span id="minTemperatuur"></span><text> °C</text></li>
+			<li>gemiddelde temperatuur <span id="gemTemperatuur"></span><text> °C</text></li>
+			<li>windrichting <span id="windrichting"></span></li>
+			<li>windkracht <span id="windkracht"></span></li>
+			<li>neerslag <span id="neerslag"></span><text>%</text></li>
+			</ul></div>		
 </body>
 </html>
