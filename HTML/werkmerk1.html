@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Visite naam</title>
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="main1.js"></script>
+</head>
+<body onload="onload()">
+	<div class="banner">
+		Visite naam
+	</div>
+	<div class="tile">
+		<div class="header">
+		Profiel
+		</div>
+		<img src="Anne_zelf.jpg" width="150" class="pasfoto"> 
+		<div class="profieltekst">Annemarleen Bosma<br>
+		Ik houd van dansen; met name BoogieWoogie. Daarnaast luister ik veel muziek en sport ik geregeld.
+		</div>
+
+	</div>
+	<div class="tile">
+		<div class="header">
+		Vaardigheden			
+		</div>
+		<div><ul>
+			<li>C#</li>
+			<li>Python</li>
+			<li>Java</li>
+			<li>JavaScript</li>
+			<li>HTML</li>
+			<li>CSS</li>
+			</ul></div>
+	</div>
+	<div class="tile">
+		<div class="header">
+		Bereikbaarheid
+		</div>
+		<div>Hemsterhuislaan 29</div>
+		<div>9752NA 29</div>
+		<div>Haren Gn</div>
+		<div>&nbsp;</div>
+		<div><a href="mailto:amholbosma@outlook.com">amholbosma@outlook.com</a></div>
+		<div><a href="tel:0642942119">06-42942119</a></div>
+		<div><a href="https://www.linkedin.com/in/amholbosma"
+			target="_blank">Linkedin</a></div>
+	</div>
+
+	<div class="tile">
+		<div class="header">
+			Referenties
+		</div>
+		<ul>
+			<li>ITPH Academy</li>
+			<li><a href="https://www.unigarant.nl/"
+				target="_blank">Unigarant Verzekeringen</a></li>
+		</ul>
+	</div>
+
+	<div class="tile">
+		<div class="header">
+			Tic tac toe
+		</div>
+		Player 1 <input type="text" name="" id="player1" value=""><br>
+		Player 2 <input type="text" name="" id="player2" value=""><br>
+		<div id="statusContainer">
+			<div>Current player: <span id="huidigeSpeler"></span>
+			<span id="symbool"></span></div>
+			<div>Status: <span id="status"></span></div>
+		</div>
+
+		<button onclick="startGame()" class="cmd">Start game</button>
+		<div id="buttonContainer" class="button-container">
+		<div class="button-row">
+			<button id="b1" onclick="zet(1, this)">1</button>
+			<button id="b2" onclick="zet(2, this)">2</button>
+			<button id="b3" onclick="zet(3, this)">3</button>
+		</div>
+
+		<div class="button-row">
+			<button id="b4" onclick="zet(4, this)">4</button>
+			<button id="b5" onclick="zet(5, this)">5</button>
+			<button id="b6" onclick="zet(6, this)">6</button>
+		</div>
+
+		<div class="button-row">
+			<button id="b7" onclick="zet(7, this)">7</button>
+			<button id="b8" onclick="zet(8, this)">8</button>
+			<button id="b9" onclick="zet(9, this)">9</button>
+		</div>
+			</div> 
+	</div>
+</body>
+</html>

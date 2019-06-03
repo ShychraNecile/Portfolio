@@ -1,0 +1,19 @@
+titel: werkmerk
+Annemarleen biedt u een Developer meteen
+
+Ontwerp:
+-"visitekaartje"
+-website die mij presenteert als professional op heb gebied van software developer
+- profiel: -> wie ben ik
+-> naam
+-> hobbies
+-> opleiding
+-> pasfoto
+
+- wat bied ik?
+- referenties
+- waar kunt u mij vinden? adres
+	-> bereikbaarheid
+	-> telefoon
+	-> email
+social media: linked in, facebook
