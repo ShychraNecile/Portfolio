@@ -1,0 +1,135 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Game_TicTacToe
+{
+    class Program
+    {
+        // Methods:
+        static bool Score(char[] raster, char Symbol)
+        {
+            // horizontal:
+            if (raster[0] == Symbol && raster[1] == Symbol && raster[2]== Symbol) {
+                return true;
+            }
+            if (raster[3] == Symbol && raster[4] == Symbol && raster[5] == Symbol)
+            {
+                return true; 
+            }
+            if (raster[6] == Symbol && raster[7] == Symbol && raster[8] == Symbol)
+            {
+                return true;
+            }
+            // vertical:
+            if (raster[0] == Symbol && raster[3] == Symbol && raster[6] == Symbol)
+            {
+                return true;
+            }
+            if (raster[1] == Symbol && raster[4] == Symbol && raster[7] == Symbol)
+            {
+                return true;
+            }
+            if (raster[2] == Symbol && raster[5] == Symbol && raster[8] == Symbol)
+            {
+                return true; 
+            }
+            // diagonal
+            if (raster[0] == Symbol && raster[4] == Symbol && raster[8] == Symbol)
+            {
+                return true;
+            }
+            if (raster[2] == Symbol && raster[4] == Symbol && raster[6] == Symbol)
+            {
+                return true; 
+            }
+            return false;
+        }
+        static void KeepMove(string moveX,char[] raster, char Symbol) {
+            raster[Int32.Parse(moveX) - 1] = Symbol;
+        }
+        static void ShowRaster(char[] raster)
+        {
+
+            string s = new string(raster);
+            Console.WriteLine(s.Substring(0,3));
+            Console.WriteLine(s.Substring(3,3));
+            Console.WriteLine(s.Substring(6,3));
+
+        }
+
+        static void Intro() {
+            Console.WriteLine("Welcome to the fun game Tic Tac Toe!");
+            Console.WriteLine("You play this game with 2 players.");
+            Console.WriteLine("Player 1 will be the 'X', player 2 will be the 'O'.");
+            Console.WriteLine("You winn the game by '3 op een rij'.");
+        }
+        static bool SpaceRaster(char[] raster) {
+
+            for (int i = 0; i < 9; i++) {
+                if (raster[i] >= '1' && raster[i] <= '9') {
+                    return true;
+                
+                } 
+            }
+            return false;
+        }
+        static void Main(string[] args)
+        {
+            char[] raster = new char[9];
+            Intro();                    
+            raster = "123456789".ToArray();
+            ShowRaster(raster);
+            string player1;
+            Console.WriteLine("Player 1: please enter your name: ");
+            player1 = Console.ReadLine();
+             
+            string player2;
+            Console.WriteLine("Player 2: please enter your name: ");
+            player2 = Console.ReadLine();
+
+            Console.WriteLine(player1 + " plays against "+ player2);
+
+            
+            bool won = false;
+            bool rasterfull = false;
+            string player = player1;
+            char symbol; 
+            while (!won && !rasterfull) {
+
+                bool ValidMove = false;
+                symbol = (player == player1) ? 'X' : 'O';
+                string moveX = "";
+                while (!ValidMove)
+                {
+                    Console.WriteLine(player + " your turn. What is your move?");
+
+                    moveX = Console.ReadLine();
+                    bool space = SpaceRaster(raster);
+                    if (space && Int32.Parse(moveX) >= 1 && Int32.Parse(moveX) <= 9) {
+
+                        ValidMove = true;
+                    }
+
+                }
+                KeepMove(moveX, raster, symbol);
+                ShowRaster(raster);
+                won = Score(raster, symbol);
+                if (won) {
+                    Console.WriteLine("Congratulations " + player);
+                }
+                player = (player == player1) ? player2 : player1;
+
+                  
+            }
+            
+            Console.ReadLine();
+            Console.WriteLine("Press <ENTER> to EXIT.");
+
+        }
+    }
+}
+
+
