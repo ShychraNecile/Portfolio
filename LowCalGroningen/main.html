@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<!--start head-->
+<head>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>LowCal Groningen</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+</head>
+<!-- einde head-->
+<!-- start load content-->
+<body onload="onload()">
+    <!-- einde load content-->
+    <!-- start vaste banner bovenkant -->
+    <table width="100%" border="0" cellpadding="10">
+     <tr>
+       <td class="banner" id="vasteH" colspan="2" bgcolor="#000000">LowCal Groningen
+       </td>
+     </tr>
+     <!-- Einde vaste banner bovenkant -->
+     
+<!-- Main inhoud -->
+        <td class="inhoud" id="tilesContainer">
+            <div class="calInput">
+                <legend>Aantal calorieën</legend>
+                    <input type="number" id="invoer-calorieen" value=""><br>
+                        
+                        <button class="okButton"onclick="submitCal()">Ok</button>
+            <!-- uitgebreid zoeken-->            
+            </div>
+                <div class="filters">
+                    <button class="searchButton" id="uitgebreidZoeken" onclick="uitgebreidZoeken()">Uitgebreid zoeken
+                    </button>
+                        <div id="keuze-afhaal-etc">
+                            <div class="keuzeCheckbox">
+                                <input type="checkbox" name="types[]" value="restaurant" id="uit-eten">
+                                <label for="uit-eten">Uit eten</label>
+                                <input type="checkbox" name="types[]" value="restaurant" id="afhalen">
+                                <label for="afhalen">Afhalen</label>
+                                <input type="checkbox" name="types[]" value="restaurant" id="bezorgen">
+                                <label for="bezorgen">Bezorgen</label>
+                                <button class="selecteerButton" onclick="selecteerAlles()">Selecteer alles</button> 
+                            </div>
+                                <div class="filterEenheden" id="keuzeOptiesBedrag">Prijs<input type="number" name="bedrag">
+                                    <div id="keuzeOptiesKilometers">Afstand<input type="number" name="kilometers">
+                                        <div id="keuzeOptiesSoortKeuken">Soort keuken:
+                                            <select name="soortKeuken">
+                                                <option value="italiaans">Italiaans</option>
+                                                <option value="chinees">Chinees</option>
+                                                <option value="grieks">Grieks</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                            </div>
+                </div>
+                <!-- einde uitgebreid zoeken-->
+                <!-- alle tegels-->
+                <div class="tile">
+                    <div class="naamMenu">Tile 1</div>
+                    <div id="aantal-calorien"></div>
+                    <img src="https://image.jimcdn.com/app/cms/image/transf/none/path/s5498559c78e006d9/image/i32a7bd7fa393c087/version/1475250445/image.png">
+                </div>
+                <!-- einde alle tegels-->
+        </td>
+
+ <!-- Einde Main inhoud -->
+
+<!--Vaste footer -->
+  <tr>
+    <td colspan="2" bgcolor="#000000">
+    <div class="footer" id="vasteFooter">Copyright © <i>LowCalGroningen</i>
+    </div>
+    </td>
+  </tr>
+</table>
+<!-- Einde vaste Footer -->
+</body>
+</html>
